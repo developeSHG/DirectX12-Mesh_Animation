@@ -8,7 +8,7 @@
 <h4>Chapter 01. Mesh</h4>
 <b>Blog</b> : https://song-ift.tistory.com/462
 <br><b>History</b> : https://github.com/developeSHG/DirectX12-Mesh_Animation/commits/01.Mesh
-<img src="https://user-images.githubusercontent.com/79896868/254642323-0b9be999-1391-45e7-aef5-557972d3cc58.png"/>
+<img width="50%" src="https://user-images.githubusercontent.com/79896868/254642323-0b9be999-1391-45e7-aef5-557972d3cc58.png"/>
 
 <br><h4>Chapter 02. Animation</h4>
 <b>Blog</b> : 
