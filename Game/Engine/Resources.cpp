@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Resources.h"
 #include "Engine.h"
+#include "MeshData.h"
 
 void Resources::Init()
 {
@@ -214,14 +215,14 @@ shared_ptr<Mesh> Resources::LoadSphereMesh()
 			//  [y, x]-[y, x+1]
 			//  |		/
 			//  [y+1, x]
-			idx.push_back(1 + (y) * ringVertexCount + (x));
-			idx.push_back(1 + (y) * ringVertexCount + (x + 1));
+			idx.push_back(1 + (y)*ringVertexCount + (x));
+			idx.push_back(1 + (y)*ringVertexCount + (x + 1));
 			idx.push_back(1 + (y + 1) * ringVertexCount + (x));
 			//		 [y, x+1]
 			//		 /	  |
 			//  [y+1, x]-[y+1, x+1]
 			idx.push_back(1 + (y + 1) * ringVertexCount + (x));
-			idx.push_back(1 + (y) * ringVertexCount + (x + 1));
+			idx.push_back(1 + (y)*ringVertexCount + (x + 1));
 			idx.push_back(1 + (y + 1) * ringVertexCount + (x + 1));
 		}
 	}
@@ -316,6 +317,21 @@ shared_ptr<Texture> Resources::CreateTextureFromResource(const wstring& name, Co
 	Add(name, texture);
 
 	return texture;
+}
+
+shared_ptr<MeshData> Resources::LoadFBX(const wstring& path)
+{
+	wstring key = path;
+
+	shared_ptr<MeshData> meshData = Get<MeshData>(key);
+	if (meshData)
+		return meshData;
+
+	meshData = MeshData::LoadFromFBX(path);
+	meshData->SetName(key);
+	Add(key, meshData);
+
+	return meshData;
 }
 
 void Resources::CreateDefaultShader()
