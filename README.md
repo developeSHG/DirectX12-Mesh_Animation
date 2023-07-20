@@ -10,6 +10,7 @@
 <b>Blog</b> : https://song-ift.tistory.com/462
 <br><b>History</b> : https://github.com/developeSHG/DirectX12-Mesh_Animation/commits/01.Mesh
 
-<br><h4>Chapter 02. Animation</h4>
+<br><h3>Chapter 02. Animation</h3>
+<img width="90%" src=""/>
 <b>Blog</b> : https://song-ift.tistory.com/465
 <br><b>History</b> : https://github.com/developeSHG/DirectX12-Mesh_Animation/commits/02.Animation(Skinning)
